@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.display {
+  color: white;
+  background-color: #333333;
+  padding: 2px 20px;
+  font-size: 2em;
+  overflow: scroll;
+}
+
+.calculator-container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  text-align: right;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.button {
+  flex-basis: 25%;
+  text-align: center;
+  padding: 2.2rem 0;
+  font-size: 1.5em;
+  background-color: #d2d2d2;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.double {
+  flex-basis: 50%;
+}
+
+.clear {
+    background-color: rgb(235, 52, 52);
+    color: white;
+}
+
+.operator,
+.negative,
+.equals {
+    background-color: orange;
+}
+
+.button:hover {
+    background-color: #c0c0c0;
+}
+
+.clear:hover {
+    background-color: rgb(220, 29, 29);
+}
+
+.operator:hover,
+.negative:hover,
+.equals:hover {
+  background-color: rgb(255, 182, 47);
+}
+
+.button:active {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .button {
+    padding: 1.5rem 0;
+  }
+}
