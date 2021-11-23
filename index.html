@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="assets/style.css" />
-    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,10 +37,24 @@
         <div class="button equals double">=</div>
       </div>
     </div>
-    <div class="center">
-        Made with < 3 by Lintang Pratama
+    <div class="history card">
+      <h2>Calculation History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>First Number</th>
+            <th>Operation</th>
+            <th>Second Number</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="historyList">
+        </tbody>
+      </table>
     </div>
+    <footer class="center mx-2">Made with < 3 by Lintang Pratama</footer>
 
     <script src="assets/calculator.js"></script>
+    <script src="assets/storage.js"></script>
   </body>
 </html>

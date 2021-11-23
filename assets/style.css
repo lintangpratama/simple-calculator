@@ -6,8 +6,32 @@
     "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  color: white;
+  background-color: orange;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #d2d2d2;
+}
+
 .center {
     text-align: center;
+}
+
+.mx-2 {
+  margin: 20px 0;
 }
 
 .display {
@@ -63,6 +87,12 @@
     background-color: orange;
 }
 
+.history {
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
 .button:hover {
     background-color: #c0c0c0;
 }
@@ -82,7 +112,27 @@
 }
 
 @media screen and (max-width: 500px) {
+  th,
+  td {
+    font-size: 10px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+  
   .button {
     padding: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  th,
+  td {
+    padding: 10px;
+  }
+  
+  .history {
+    width: 100%;
   }
 }

@@ -53,11 +53,23 @@ function handleOperators(operator) {
 // Do the calculation handler
 function doCalculation() {
     if (calculator.firstNumber || calculator.operator) {
+        let result = 0;
         if (calculator.operator === "+") {
-            calculator.displayNumber = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
+            result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
         } else if (calculator.operator === "-") {
-            calculator.displayNumber = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
+            result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
         }
+
+        const history = {
+          firstNumber: calculator.firstNumber,
+          secondNumber: calculator.displayNumber,
+          operator: calculator.operator,
+          result: result,
+        }
+
+        putHistoryToLocal(history);
+        calculator.displayNumber = result;
+        showHistory();
     } else {
         alert('Ups! kamu belum menetapkan operator');
     }
